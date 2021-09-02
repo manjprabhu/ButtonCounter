@@ -1,5 +1,6 @@
 package com.example.buttoncounter
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -22,10 +23,14 @@ class MainActivity : AppCompatActivity() {
             mBinding.textview.text = count.toString()
         }
 
+        mBinding.buttongoto.setOnClickListener{
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
         isOperatorTesting()
     }
 
-    fun isOperatorTesting() {
+    private fun isOperatorTesting() {
         var name = "hello"
         var age = 25
         var salary = 1000.0

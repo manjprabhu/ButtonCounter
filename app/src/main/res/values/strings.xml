@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ButtonCounter</string>
     <string name="click_me">Click</string>
+    <string name="go_to">GoTo</string>
 </resources>
