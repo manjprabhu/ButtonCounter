@@ -39,13 +39,19 @@ class MainActivity : AppCompatActivity() {
 
         for(attribute in details) {
 
-            if(attribute is String) {
+            when(attribute) {
+                is String ->  Log.v(TAG,"==>> Name 1:" +name)
+                is Int -> Log.v(TAG,"==>> Age 1:"+age)
+                is Double ->  Log.v(TAG,"==>>  Salary 1:"+salary)
+            }
+
+           /* if(attribute is String) {
                 Log.v(TAG,"Name:" +name)
             } else if(attribute is Int) {
                 Log.v(TAG,"Age:"+age)
             } else if(attribute is Double) {
                 Log.v(TAG,"Salary:"+salary)
-            }
+            }*/
         }
     }
 }

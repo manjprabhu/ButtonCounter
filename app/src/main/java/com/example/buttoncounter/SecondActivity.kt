@@ -33,7 +33,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun smartCasttest() {
-        var name : String
+        var name: String
         name = "hello"
 
         var x = 1000
@@ -42,10 +42,10 @@ class SecondActivity : AppCompatActivity() {
 
         var z = 12293908324892348
 
-        when(name) {
-          is String -> Log.v("===>>>" ,"Name Length:"+name.length)
-        }
+        when (name) {
+            is String -> Log.v("===>>>", "Name Length:" + name.length)
 
+        }
 
     }
 
