@@ -8,7 +8,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        smartCast()
+        smartCasttest()
     }
 
     private fun smartCast() {
@@ -22,6 +22,8 @@ class SecondActivity : AppCompatActivity() {
             Log.v("TAG", "name length :" + name.length)
         }
 
+        //return true if name is not a string.
+        //Return false if name is a String
         if (name !is String)
             return
         else {
@@ -29,4 +31,22 @@ class SecondActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun smartCasttest() {
+        var name : String
+        name = "hello"
+
+        var x = 1000
+
+        var y = 1000.01F
+
+        var z = 12293908324892348
+
+        when(name) {
+          is String -> Log.v("===>>>" ,"Name Length:"+name.length)
+        }
+
+
+    }
+
 }
