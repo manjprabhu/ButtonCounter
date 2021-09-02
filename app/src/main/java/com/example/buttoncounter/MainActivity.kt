@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     private var TAG : String =  "MainActivity"
     private lateinit var mBinding: ActivityMainBinding
-    var count =0
+    private var count =0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,18 +31,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isOperatorTesting() {
-        var name = "hello"
-        var age = 25
-        var salary = 1000.0
+        val name = "hello"
+        val age = 25
+        val salary = 1000.0
 
-        var details: List<Any> =  listOf(name,age,salary)
+        val details: List<Any> =  listOf(name,age,salary)
 
         for(attribute in details) {
 
             when(attribute) {
-                is String ->  Log.v(TAG,"==>> Name 1:" +name)
-                is Int -> Log.v(TAG,"==>> Age 1:"+age)
-                is Double ->  Log.v(TAG,"==>>  Salary 1:"+salary)
+                is String ->  Log.v(TAG,"==>> Name 1: $name")
+                is Int -> Log.v(TAG, "==>> Age 1: $age")
+                is Double ->  Log.v(TAG,"==>>  Salary 1: $salary")
             }
 
            /* if(attribute is String) {
