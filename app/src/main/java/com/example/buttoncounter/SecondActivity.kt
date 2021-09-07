@@ -13,10 +13,7 @@ class SecondActivity : AppCompatActivity() {
 
     private fun smartCast() {
 
-        var name = "Test name"
-        var age = 25
-        var SSN = 7473273452783
-        var salary = 50000
+        val name = "Test name"
 
         if (name is String) {
             Log.v("TAG", "name length :" + name.length)
@@ -33,14 +30,13 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun smartCasttest() {
-        var name: String
-        name = "hello"
+        val name = "hello"
 
-        var x = 1000
+        val x = 1000
 
-        var y = 1000.01F
+        val y = 1000.01F
 
-        var z = 12293908324892348
+        val z = 12293908324892348
 
 
         val details: List<Any> =  listOf(name,x,y,z)
