@@ -9,21 +9,21 @@ import com.example.buttoncounter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private var TAG : String =  "MainActivity"
+    private val TAG = "MainActivity"
     private lateinit var mBinding: ActivityMainBinding
-    private var count =0
+    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mBinding.button.setOnClickListener {
             count += 1
             mBinding.textview.text = count.toString()
         }
 
-        mBinding.buttongoto.setOnClickListener{
+        mBinding.buttongoto.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
@@ -35,23 +35,23 @@ class MainActivity : AppCompatActivity() {
         val age = 25
         val salary = 1000.0
 
-        val details: List<Any> =  listOf(name,age,salary)
+        val details: List<Any> = listOf(name, age, salary)
 
-        for(attribute in details) {
+        for (attribute in details) {
 
-            when(attribute) {
-                is String ->  Log.v(TAG,"==>> Name 1: $name")
+            when (attribute) {
+                is String -> Log.v(TAG, "==>> Name 1: $name")
                 is Int -> Log.v(TAG, "==>> Age 1: $age")
-                is Double ->  Log.v(TAG,"==>>  Salary 1: $salary")
+                is Double -> Log.v(TAG, "==>>  Salary 1: $salary")
             }
 
-           /* if(attribute is String) {
-                Log.v(TAG,"Name:" +name)
-            } else if(attribute is Int) {
-                Log.v(TAG,"Age:"+age)
-            } else if(attribute is Double) {
-                Log.v(TAG,"Salary:"+salary)
-            }*/
+            /* if(attribute is String) {
+                 Log.v(TAG,"Name:" +name)
+             } else if(attribute is Int) {
+                 Log.v(TAG,"Age:"+age)
+             } else if(attribute is Double) {
+                 Log.v(TAG,"Salary:"+salary)
+             }*/
         }
     }
 }

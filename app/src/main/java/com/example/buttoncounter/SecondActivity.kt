@@ -39,14 +39,14 @@ class SecondActivity : AppCompatActivity() {
         val z = 12293908324892348
 
 
-        val details: List<Any> =  listOf(name,x,y,z)
+        val details: List<Any> = listOf(name, x, y, z)
 
-        for(attribute in details) {
-            when(attribute) {
-                is String -> Log.v("===>>>"," Name : $name")
-                is Int -> Log.v("===>>>"," X: $x")
-                is Float -> Log.v("===>>>" , "Y : $y")
-                is Long -> Log.v("===>>>","Z $z")
+        for (attribute in details) {
+            when (attribute) {
+                is String -> Log.v("===>>>", " Name : $name")
+                is Int -> Log.v("===>>>", " X: $x")
+                is Float -> Log.v("===>>>", "Y : $y")
+                is Long -> Log.v("===>>>", "Z $z")
             }
         }
 
